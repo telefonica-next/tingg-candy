@@ -385,7 +385,7 @@ try:
           logData = timestamp + ' ' + str(x) + ' ' + str(y) + ' ' + str(z) + ' ' + str(distanceTravelledInASession) + ' ' + str(db["overallDistanceTravelledInMm"])
           with open(log_path, 'a') as log_file:
             log_file.write(logData + "\n")
-      elif read_data == "GoToHome":
+      elif read_data == "H": # GoToHome (it is intentionally only one character, because we have discovered that there are transmission errors with longer words and then this "if" often was not triggered)
         observeGoToHomeProcessTillEndAndInitData()
         sendAllDataToTingg()
         print("####################")

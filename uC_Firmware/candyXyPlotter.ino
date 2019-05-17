@@ -383,7 +383,7 @@ void stop_all_movements()
 
 void goto_machine_zero()
 {
-  Serial.println("GoToHome");
+  Serial.println("H"); // GoToHome (it is intentionally only one character, because we have discovered that there are transmission errors with longer words and then the "if" in the Raspberry code often was not triggered)
   
   stop_all_movements();
   
